@@ -31,7 +31,9 @@ public class Zad3 {
     
     public static void main(String[] args) throws FileNotFoundException, IOException 
     {
-        /*
+           System.out.println("--------");
+          System.out.println("| ZAD1 |" );
+          System.out.println("--------");
         //zad1
         Set<String> zbiorDni = new TreeSet<>();
        // Set<String> zbiorDni = new HashSet<>();
@@ -46,10 +48,12 @@ public class Zad3 {
    //fukncja TreeSet gwarantuje nam dodatkowe a hashSet jest podstawową implementacja która jest nzacznie szybsza od treeset'a
    //Funkcji hashSet możemy użyć do działań podstawowych takich jak: dodawanie,usuwane a treeset'a jak chcemy żeby elementy były posortowane rosnąco lub malejąco
    // trzeba było dodać  "import java.util.TreeSet;" to jest jedyna zmiana w kodzie którą musimy dodać żeby z hashset zmieniać na treeset'a
-   */
-        
-   /*
-   //zad2
+   
+       
+      System.out.println("--------");
+          System.out.println("| ZAD2 |" );
+          System.out.println("--------");
+   
     Map<String, String> dniTygodnia = new HashMap<>();
     dniTygodnia.put("pn", "poniedziałek");
     dniTygodnia.put("wt", "wtorek");
@@ -78,19 +82,23 @@ public class Zad3 {
         Student numer_1 = Grupa_Wlasciwa.get(i);
         System.out.println(numer_1.toString());   
       }
-    */
+    
         List<String> Categorys_list = new ArrayList<>();
         List<Product> Products_list = new ArrayList<>();
         Map<Integer, Product> Products_id = new HashMap<>();
         Map<String, List<Product>> Products_Category = new HashMap<>();
         //zad3
+        
+         System.out.println("--------");
+          System.out.println("| ZAD3 |" );
+          System.out.println("--------");
        try(BufferedReader in = new BufferedReader(new FileReader("plik.txt"))) 
        {
-            var s = in.readLine();
+               String s = in.readLine();
             Product temp2;
             for(;s!=null;)
             {
-                var temp = s.split(";");
+                   String[] temp = s.split(";");
                 temp2 = new Product(temp[0], temp[1], temp[2],Double.parseDouble(temp[3]));
                 boolean add = Products_list.add(temp2);
 
@@ -120,7 +128,7 @@ public class Zad3 {
         {
             @Override
             public void accept(Product produkt) {
-                var temp3 = Categorys_list.indexOf(produkt.GetCategory());
+                int temp3 = Categorys_list.indexOf(produkt.GetCategory());
                 ListsOfProduct[temp3].add(produkt);
                 Products_Category.put(Categorys_list.get(temp3), ListsOfProduct[temp3]);
             }
