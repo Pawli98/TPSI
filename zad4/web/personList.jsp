@@ -22,7 +22,7 @@
                  <c:forEach items="${osoby}" var="osoba">
                 <p>    
                     <tr>         
-                        <td>${osoba.firstName}</td><td>${osoba.lastName}</td><td>${osoba.emailAddress}</td>
+                        <td>${osoba.firstName}</td><td>${osoba.lastName}</td><td>${osoba.email }</td>
                     </tr>
                 </p>
                 </c:forEach>
