@@ -17,7 +17,7 @@
             <h1> Tabelka Osób</h1>
            <table border=1>    
                 <tr>
-                    <td> <h3>Imie </h3></td> <td><h3> Nazwisko </h3></td> <td><h3> E-mail </h3></td>
+                    <td> <th>Imie </th></td> <td><th> Nazwisko </th></td> <td><th> E-mail </th></td>
                 </tr>
                  <c:forEach items="${osoby}" var="osoba">
                 <p>    
